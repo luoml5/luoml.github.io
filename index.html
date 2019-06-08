@@ -202,7 +202,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -230,7 +230,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -247,7 +247,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
 
   </li>
         
@@ -264,7 +264,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
 
   </li>
         
@@ -281,7 +281,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
         
@@ -298,7 +298,7 @@
 
     
 
-    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>Zeitplan</a>
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>Schedule</a>
 
   </li>
         
@@ -367,6 +367,174 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://luoml.com/2019/06/08/C-language-chapter-one/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Maolin Luo">
+      <meta itemprop="description" content="It starts on June 1, 2019">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="luoml's personal homepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/08/C-language-chapter-one/" class="post-title-link" itemprop="url">C language chapter one</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-08 13:53:26 / Modified: 16:04:54" itemprop="dateCreated datePublished" datetime="2019-06-08T13:53:26+08:00">2019-06-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-语言学习笔记/" itemprop="url" rel="index"><span itemprop="name">C 语言学习笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>以前上课的时候C语言没怎么认真学，现在回顾一下。</p>
+<h1 id="C语言出现的历史背景"><a href="#C语言出现的历史背景" class="headerlink" title="C语言出现的历史背景"></a>C语言出现的历史背景</h1><p><em>C语言是在B语言的基础上发展起来的，它的根源可以追溯到ALGOL60.1960年出现的ALGOL是一种<strong>面向问题</strong>的高级语言，它离硬件比较远，不宜用来编写系统程序。</em></p>
+<p><em>本书基本上以C89为基础并结合当前常用的C编译系统的情况进行介绍。</em></p>
+<h1 id="C语言的特点"><a href="#C语言的特点" class="headerlink" title="C语言的特点"></a>C语言的特点</h1><p>（1）语言简洁、紧凑、使用方便、灵活。C语言一共有32个关键字，9中控制语句。<br>（2）运算符丰富。共有34种运算符。C语言把括号、赋值、强制类型转换等都作为运算符处理，从而使C语言的运算符类型及其丰富，表达式类型多样化。<br>（3）数据类型丰富。C语言提供的数据类型有：整数、浮点型、字符型、数据类型、指针类型、结构体类型、共用体内型等，能用来实现各种复杂的数据结构（如链表、树、栈等）的运算。<br>（4）具有结构化的控制语句。如if else语句，while语句，do whileyuju，switch语句，for语句。用函数作为程序的模块单位，便于实现程序的模块化。C语言是完全模块和结构化的语言。<br>（5）语法限制不太严格，程序设计的自由度较大。<br>（6）C语言允许直接访问物理地址，能进行位（bit）操作，能实现汇编语言的大部分功能。<br>（7）生成目标的代码质量高，程序执行效率高。C语言一般只比汇编语言生成的代码效率低10%~20%。<br>（8）比起汇编语言，可移植性好。</p>
+<h1 id="简单C语言程序介绍"><a href="#简单C语言程序介绍" class="headerlink" title="简单C语言程序介绍"></a>简单C语言程序介绍</h1><p>例 1.1 输出一行信息<br>‘’’<br>‘#’ include &lt;stdio. h&gt;<br>void main()<br>{
+    print(“This is a C program. \n”);<br>}
+‘’’<br>void表示此函数是空类型，不会有返回值。\n是换行符。分号是每个语句后面必不可少的。</p>
+<p>小结：<br>（1）C程序是由函数构成的。一个C源程序至少且仅包含一个main函数。函数是C程序的基本单位，编写C程序就是编写一个个的函数。ANSI C提供一百多个库函数，Turbo C提供三百多个库函数。<br>（2）一个函数由两部分组成：<br>①函数的首部，即函数的第一行，包括函数名、函数类型、函数参数名、函数参数类型。<br>②函数体。有声明部分和执行部分。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://luoml.com/2019/06/07/The-life/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -405,14 +573,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-06-07 21:07:12 / Geändert am: 21:38:42" itemprop="dateCreated datePublished" datetime="2019-06-07T21:07:12+08:00">2019-06-07</time>
+              <time title="Created: 2019-06-07 21:07:12 / Modified: 21:38:42" itemprop="dateCreated datePublished" datetime="2019-06-07T21:07:12+08:00">2019-06-07</time>
             
 
             
@@ -556,14 +724,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-06-05 21:40:15 / Geändert am: 21:42:04" itemprop="dateCreated datePublished" datetime="2019-06-05T21:40:15+08:00">2019-06-05</time>
+              <time title="Created: 2019-06-05 21:40:15 / Modified: 21:42:04" itemprop="dateCreated datePublished" datetime="2019-06-05T21:40:15+08:00">2019-06-05</time>
             
 
             
@@ -698,14 +866,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-06-01 20:04:55" itemprop="dateCreated datePublished" datetime="2019-06-01T20:04:55+08:00">2019-06-01</time>
+              <time title="Created: 2019-06-01 20:04:55" itemprop="dateCreated datePublished" datetime="2019-06-01T20:04:55+08:00">2019-06-01</time>
             
 
             
@@ -838,14 +1006,44 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
               
             </nav>
           
@@ -896,7 +1094,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -904,7 +1102,7 @@
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
 
 
 
@@ -1030,6 +1228,8 @@
 
   
   
+    
+      
     
       
     
