@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1 Introduction to Layout EditingCommand-Line Arguments 命令行参数略(Windows系统并不常用命令行) Elements of the user interfaceThe L-Edit interface has the following major components:  Menu bar(adjoined to the title b">
+<meta name="keywords" content="LEdit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="introtoLEdit">
+<meta property="og:url" content="http://luoml.com/2019/09/09/introtoLEdit/index.html">
+<meta property="og:site_name" content="luoml&#39;s personal homepage">
+<meta property="og:description" content="1 Introduction to Layout EditingCommand-Line Arguments 命令行参数略(Windows系统并不常用命令行) Elements of the user interfaceThe L-Edit interface has the following major components:  Menu bar(adjoined to the title b">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568006021251.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568081227556.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568081397448.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568081766208.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568081993379.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082138390.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082203156.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082454145.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082526810.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082707499.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082978533.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568085026284.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568088733565.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568088865988.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568090449575.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568090880515.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568096298416.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568096320185.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568096640393.png">
+<meta property="og:image" content="file:///C:/Users/lml19/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568097056634.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568097121971.png">
+<meta property="og:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568097302244.png">
+<meta property="og:updated_time" content="2019-09-10T07:27:39.481Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="introtoLEdit">
+<meta name="twitter:description" content="1 Introduction to Layout EditingCommand-Line Arguments 命令行参数略(Windows系统并不常用命令行) Elements of the user interfaceThe L-Edit interface has the following major components:  Menu bar(adjoined to the title b">
+<meta name="twitter:image" content="c:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568006021251.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://luoml.com/2019/09/09/introtoLEdit/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>introtoLEdit | luoml's personal homepage</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?03f9f560a5e83f436c7886ec375b031e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">luoml's personal homepage</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>Zeitplan</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>Commonweal 404</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://luoml.com/2019/09/09/introtoLEdit/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Maolin Luo">
+      <meta itemprop="description" content="It starts on June 1, 2019">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="luoml's personal homepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">introtoLEdit
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-09-09 12:54:28" itemprop="dateCreated datePublished" datetime="2019-09-09T12:54:28+08:00">2019-09-09</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-09-10 15:27:39" itemprop="dateModified" datetime="2019-09-10T15:27:39+08:00">2019-09-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LEdit/" itemprop="url" rel="index"><span itemprop="name">LEdit</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-Introduction-to-Layout-Editing"><a href="#1-Introduction-to-Layout-Editing" class="headerlink" title="1 Introduction to Layout Editing"></a>1 Introduction to Layout Editing</h1><h2 id="Command-Line-Arguments-命令行参数"><a href="#Command-Line-Arguments-命令行参数" class="headerlink" title="Command-Line Arguments 命令行参数"></a>Command-Line Arguments 命令行参数</h2><p>略(Windows系统并不常用命令行)</p>
+<h2 id="Elements-of-the-user-interface"><a href="#Elements-of-the-user-interface" class="headerlink" title="Elements of the user interface"></a>Elements of the user interface</h2><p>The L-Edit interface has the following major components:</p>
+<ul>
+<li>Menu bar(adjoined to the title bar)</li>
+<li>Toolbars for drawing, editing, verification, object snapping, etc.</li>
+<li>Layer palettes 图层面板</li>
+<li>Status Bar</li>
+<li>Mouse button bar</li>
+<li>Locator 定位器</li>
+<li>Aerial view 俯瞰图</li>
+<li>Layout area  蓝图区</li>
+<li>Command line interface</li>
+<li>Verification Error Navigator 错误导航器</li>
+</ul>
+<hr>
+<p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568006021251.png" alt="1568006021251"></p>
+<h2 id="Title-Bar-and-Menu-Bar"><a href="#Title-Bar-and-Menu-Bar" class="headerlink" title="Title Bar and Menu Bar"></a>Title Bar and Menu Bar</h2><p>The <em>title bar</em> indicates the active file and cell. The <em>menu bar</em>, the horizontal space at the top of the screen, contains the titles of the L-Edit command menus.</p>
+<p><strong>File</strong>                Commands for creating, opening, saving, and printing files</p>
+<p><strong>Edit</strong>               Commands for copying, deleting, selecting, finding, and textual editing</p>
+<p><strong>View</strong>             Commands for expanding, contracting, and shifting the view</p>
+<p><strong>Draw</strong>            Commands for transforming design elements</p>
+<p><strong>Cell</strong>               Commands for creating, manipulating,  and instancing cells</p>
+<p><strong>Setup</strong>           Commands for customizing setup parameters for the application, design, layers, color palette, and tools</p>
+<p><strong>Tools</strong>            Commands for examining XrefCells, creating and clearing generated layers, DRC, placing and routing the design, extracting a netlist, viewing a cross-section, and running L-Edit macros</p>
+<p><strong>Window</strong>       Commands for displaying document windows</p>
+<p><strong>Help</strong>              Commands for accessing online user guides and general information about L-Edit and Tanner EDA</p>
+<h2 id="Toolbars"><a href="#Toolbars" class="headerlink" title="Toolbars"></a>Toolbars</h2><p>L-Edit provides numerous toolbars to speed editing, which you can show or hide using <strong>View&gt;Toolbars.</strong></p>
+<p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568081227556.png" alt="1568081227556"></p>
+<h3 id="Standard-Toolbars"><a href="#Standard-Toolbars" class="headerlink" title="Standard Toolbars"></a>Standard Toolbars</h3><p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568081397448.png" alt="1568081397448"></p>
+<h3 id="Editing-Toolbar"><a href="#Editing-Toolbar" class="headerlink" title="Editing Toolbar"></a>Editing Toolbar</h3><p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568081766208.png" alt="1568081766208"></p>
+<h3 id="Drawing-Toolbar"><a href="#Drawing-Toolbar" class="headerlink" title="Drawing Toolbar"></a>Drawing Toolbar</h3><p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568081993379.png" alt="1568081993379"></p>
+<h3 id="Verification-Toolbar"><a href="#Verification-Toolbar" class="headerlink" title="Verification Toolbar"></a>Verification Toolbar</h3><p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082138390.png" alt="1568082138390"></p>
+<h3 id="Alignment-Toolbar"><a href="#Alignment-Toolbar" class="headerlink" title="Alignment Toolbar"></a>Alignment Toolbar</h3><p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082203156.png" alt="1568082203156"></p>
+<h3 id="Multigrid-Toolbar"><a href="#Multigrid-Toolbar" class="headerlink" title="Multigrid Toolbar"></a>Multigrid Toolbar</h3><p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082454145.png" alt="1568082454145"></p>
+<h3 id="Base-Point-Toolbar"><a href="#Base-Point-Toolbar" class="headerlink" title="Base Point Toolbar"></a>Base Point Toolbar</h3><p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082526810.png" alt="1568082526810"></p>
+<h3 id="Object-Snap-Toolbar"><a href="#Object-Snap-Toolbar" class="headerlink" title="Object Snap Toolbar"></a>Object Snap Toolbar</h3><p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082707499.png" alt="1568082707499"></p>
+<h3 id="Node-Highlighting-Toolbar"><a href="#Node-Highlighting-Toolbar" class="headerlink" title="Node Highlighting Toolbar"></a>Node Highlighting Toolbar</h3><p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568082978533.png" alt="1568082978533"></p>
+<h2 id="Layer-Palettes"><a href="#Layer-Palettes" class="headerlink" title="Layer Palettes"></a>Layer Palettes</h2><p>L-Edit supports an unlimited number of technology layers. They can be displayed using either of two layer ‘palettes’.</p>
+<p>The <strong>Compact Layer Palette</strong>, a grid of icons that replicate each layer’s color and pattern, provides a quick way to select layers.</p>
+<p>The <strong>Layer Palette</strong> is also used for layer selection, but provides additional features for layer display and manipulation.</p>
+<p>Either or both palettes can be open at once, and can float or be docked. You can resize the palettes or use the scroll bars to view layers not visible in the current display. </p>
+<p>Both can be filtered using a pull-down category list to display just those layers that are just those<br><strong>Drawn, In Use, Generated</strong> or <strong>Special</strong>. </p>
+<p>You can also select <strong>Filter</strong> then enter text in the entry field to limit display to layers that include the<br>exactly the characters entered, anywhere in the layer name. </p>
+<p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568085026284.png" alt="1568085026284"></p>
+<h3 id="Using-the-Compact-Palette"><a href="#Using-the-Compact-Palette" class="headerlink" title="Using the Compact Palette"></a>Using the Compact Palette</h3><p>As the pointer moves over an icon in the Compact Layer palette, the name of the layer will appear in the status bar. </p>
+<p>Icons in the Compact Layer palette are displayed in the same order as they are listed in the <strong>Setup</strong><br><strong>Layers</strong> dialog, arrayed from top to bottom and left to right. </p>
+<p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568088733565.png" alt="1568088733565"></p>
+<p>You can show, hide, or lock layers; open the <strong>Setup Layers</strong> dialog, and change the size of the icons in the Compact Layer palette by right-clicking on any layer icon to open the menu shown below. </p>
+<p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568088865988.png" alt="1568088865988"></p>
+<p><strong>Setup</strong> opens the <strong>Setup Layers</strong> dialog. You can also open <strong>Setup Layers</strong> directly to a specific layer by double-clicking on that layer’s icon in the Compact Layer palette.</p>
+<p>Use <strong>Increase Icon Size</strong> or <strong>Decrease Icon Size</strong> to change the size of the layer icons by two pixels each time you select the command.   </p>
+<h3 id="Locking-Layers"><a href="#Locking-Layers" class="headerlink" title="Locking Layers"></a>Locking Layers</h3><p><strong>Lock [Layer name]</strong> refers to the layer icon the pointer is positioned over at the time you activate the menu. When a layer is locked, you cannot draw, move, or edit objects on that layer. Use <strong>Lock All</strong> or <strong>Unlock All</strong> to lock or unlock all layers, respectively. </p>
+<p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568090449575.png" alt="1568090449575"></p>
+<h3 id="Using-the-layer-Palette"><a href="#Using-the-layer-Palette" class="headerlink" title="Using the layer Palette"></a>Using the layer Palette</h3><p>Use the Layer Palette to manage layer settings and display properties. </p>
+<p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568090880515.png" alt="1568090880515"></p>
+<p>上图的介绍红色和灰色应该是标反了。</p>
+<p>(Currently selected layer)    This header area indicates the currently selected layer. Right-clicking here opens a context-sensitive menu.</p>
+<p>(Category field)        Select a layer category — All, Drawn, In Use, Generated or Special to limit the list to just that type of layer. Choosing Filter in this field lets you filter the displayed list by name. </p>
+<p>(Filter field)        Filters the layer list within the current display to show only those layers that contain the characters in this field anyplace in their name. For example, “la” in the filter field will display layers “label” and “glass” and any others with “al” any place in their name. </p>
+<p><strong>Layer List</strong>        Use the buttons in the layers list to sort the list. Click in a checkbox to apply a layer setting.</p>
+<p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568096298416.png" alt="1568096298416"></p>
+<p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568096320185.png" alt="1568096320185"></p>
+<p><strong>Locked</strong><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568096640393.png" alt="1568096640393">        When a box in this column is checked, the layer is locked so that<br>geometry cannot be drawn, moved, or edited. </p>
+<p><strong>Hidden</strong><img src="file:///C:/Users/lml19/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png" alt="img">        When a box in this column is checked, the layer is hidden (not<br>displayed in layout). </p>
+<p><strong>Protected</strong><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568097056634.png" alt="1568097056634">        When a box in this column is checked, the layer is protected (so that<br>objects on the layer cannot be selected.) </p>
+<p><strong>GDSII number</strong><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568097121971.png" alt="1568097121971">        This column displays the GDSII layer number. </p>
+<p><strong>Select</strong>            Use these buttons to toggle selectability for the active design. </p>
+<p><img src="C:%5CUsers%5Clml19%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568097302244.png" alt="1568097302244"></p>
+<p>(Currently loaded palette)        This field displays the name of the palette that is currently loaded. <all layers> is the default. It is also a pull-down menu you can use to select previously saved<br>palettes, or to create and save palettes using the <setup> option . </setup></all></p>
+<h4 id="Layer-Palette-Shortcuts"><a href="#Layer-Palette-Shortcuts" class="headerlink" title="Layer Palette Shortcuts"></a>Layer Palette Shortcuts</h4><h4 id="Creating-and-saving-Palettes"><a href="#Creating-and-saving-Palettes" class="headerlink" title="Creating and saving Palettes"></a>Creating and saving Palettes</h4>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LEdit/" rel="tag"># LEdit</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/06/Weak-value/" rel="next" title="Weak value">
+                <i class="fa fa-chevron-left"></i> Weak value
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/18/FDTD-learning-record-1/" rel="prev" title="FTDT learning record 1">
+                FTDT learning record 1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Maolin Luo</p>
+              <div class="site-description motion-element" itemprop="description">It starts on June 1, 2019</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">Kategorien</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">schlagwörter</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction-to-Layout-Editing"><span class="nav-number">1.</span> <span class="nav-text">1 Introduction to Layout Editing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Command-Line-Arguments-命令行参数"><span class="nav-number">1.1.</span> <span class="nav-text">Command-Line Arguments 命令行参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Elements-of-the-user-interface"><span class="nav-number">1.2.</span> <span class="nav-text">Elements of the user interface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Title-Bar-and-Menu-Bar"><span class="nav-number">1.3.</span> <span class="nav-text">Title Bar and Menu Bar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Toolbars"><span class="nav-number">1.4.</span> <span class="nav-text">Toolbars</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Standard-Toolbars"><span class="nav-number">1.4.1.</span> <span class="nav-text">Standard Toolbars</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Editing-Toolbar"><span class="nav-number">1.4.2.</span> <span class="nav-text">Editing Toolbar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Drawing-Toolbar"><span class="nav-number">1.4.3.</span> <span class="nav-text">Drawing Toolbar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Verification-Toolbar"><span class="nav-number">1.4.4.</span> <span class="nav-text">Verification Toolbar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Alignment-Toolbar"><span class="nav-number">1.4.5.</span> <span class="nav-text">Alignment Toolbar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multigrid-Toolbar"><span class="nav-number">1.4.6.</span> <span class="nav-text">Multigrid Toolbar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Base-Point-Toolbar"><span class="nav-number">1.4.7.</span> <span class="nav-text">Base Point Toolbar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-Snap-Toolbar"><span class="nav-number">1.4.8.</span> <span class="nav-text">Object Snap Toolbar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-Highlighting-Toolbar"><span class="nav-number">1.4.9.</span> <span class="nav-text">Node Highlighting Toolbar</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Layer-Palettes"><span class="nav-number">1.5.</span> <span class="nav-text">Layer Palettes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-Compact-Palette"><span class="nav-number">1.5.1.</span> <span class="nav-text">Using the Compact Palette</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Locking-Layers"><span class="nav-number">1.5.2.</span> <span class="nav-text">Locking Layers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-the-layer-Palette"><span class="nav-number">1.5.3.</span> <span class="nav-text">Using the layer Palette</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Layer-Palette-Shortcuts"><span class="nav-number">1.5.3.1.</span> <span class="nav-text">Layer Palette Shortcuts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Creating-and-saving-Palettes"><span class="nav-number">1.5.3.2.</span> <span class="nav-text">Creating and saving Palettes</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Maolin Luo</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
